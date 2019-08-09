@@ -1,0 +1,1634 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12 Integer to Roman · LeetCode Solutions</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="13.html" />
+    
+    
+    <link rel="prev" href="11.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://jiali97.github.io" target="_blank" class="custom-link">Jiali's Blog</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="LinkedList.html">
+            
+                <a href="LinkedList.html">
+            
+                    
+                    Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="BinarySearch.html">
+            
+                <a href="BinarySearch.html">
+            
+                    
+                    Binary Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    1 Two Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    2 Add Two Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    3 Longest Substring Without Repeating Characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    4 Median of Two Sorted Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="5.html">
+            
+                <a href="5.html">
+            
+                    
+                    5 Longest Palindromic Substring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="6.html">
+            
+                <a href="6.html">
+            
+                    
+                    6 ZigZag Conversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="7.html">
+            
+                <a href="7.html">
+            
+                    
+                    7 Reverse Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="8.html">
+            
+                <a href="8.html">
+            
+                    
+                    8 String to Integer (atoi)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="9.html">
+            
+                <a href="9.html">
+            
+                    
+                    9 Palindrome Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="10.html">
+            
+                <a href="10.html">
+            
+                    
+                    10 Regular Expression Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="11.html">
+            
+                <a href="11.html">
+            
+                    
+                    11 Container With Most Water
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="12.html">
+            
+                <a href="12.html">
+            
+                    
+                    12 Integer to Roman
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="13.html">
+            
+                <a href="13.html">
+            
+                    
+                    13 Roman to Integer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="14.html">
+            
+                <a href="14.html">
+            
+                    
+                    14 Longest Common Prefix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="15.html">
+            
+                <a href="15.html">
+            
+                    
+                    15 3Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="16.html">
+            
+                <a href="16.html">
+            
+                    
+                    16 3Sum Closest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="17.html">
+            
+                <a href="17.html">
+            
+                    
+                    17 Letter Combinations of a Phone Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="18.html">
+            
+                <a href="18.html">
+            
+                    
+                    18 4Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="19.html">
+            
+                <a href="19.html">
+            
+                    
+                    19 Remove Nth Node From End of List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="20.html">
+            
+                <a href="20.html">
+            
+                    
+                    20 Valid Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="21.html">
+            
+                <a href="21.html">
+            
+                    
+                    21 Merge Two Sorted Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="22.html">
+            
+                <a href="22.html">
+            
+                    
+                    22 Generate Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="23.html">
+            
+                <a href="23.html">
+            
+                    
+                    23 Merge k Sorted Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="24.html">
+            
+                <a href="24.html">
+            
+                    
+                    24 Swap Nodes in Pairs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="25.html">
+            
+                <a href="25.html">
+            
+                    
+                    25 Reverse Nodes in k-Group
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="26.html">
+            
+                <a href="26.html">
+            
+                    
+                    26 Remove Duplicates from Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="27.html">
+            
+                <a href="27.html">
+            
+                    
+                    27 Remove Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="28.html">
+            
+                <a href="28.html">
+            
+                    
+                    28 Implement strStr()
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="29.html">
+            
+                <a href="29.html">
+            
+                    
+                    29 Divide Two Integers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="30.html">
+            
+                <a href="30.html">
+            
+                    
+                    30 Substring with Concatenation of All Words
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="31.html">
+            
+                <a href="31.html">
+            
+                    
+                    31 Next Permutation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="32.html">
+            
+                <a href="32.html">
+            
+                    
+                    32 Longest Valid Parentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="33.html">
+            
+                <a href="33.html">
+            
+                    
+                    33 Search in Rotated Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" data-path="34.html">
+            
+                <a href="34.html">
+            
+                    
+                    34 Find First and Last Position of Element in Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" data-path="35.html">
+            
+                <a href="35.html">
+            
+                    
+                    35 Search Insert Position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" data-path="36.html">
+            
+                <a href="36.html">
+            
+                    
+                    36 Valid Sudoku
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" data-path="37.html">
+            
+                <a href="37.html">
+            
+                    
+                    37 Sudoku Solver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" data-path="38.html">
+            
+                <a href="38.html">
+            
+                    
+                    38 Count and Say
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" data-path="39.html">
+            
+                <a href="39.html">
+            
+                    
+                    39 Combination Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" data-path="40.html">
+            
+                <a href="40.html">
+            
+                    
+                    40 Combination Sum II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" data-path="41.html">
+            
+                <a href="41.html">
+            
+                    
+                    41 First Missing Positive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.45" data-path="42.html">
+            
+                <a href="42.html">
+            
+                    
+                    42 Trapping Rain Water
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.46" data-path="50.html">
+            
+                <a href="50.html">
+            
+                    
+                    50 Pow(x, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.47" data-path="61.html">
+            
+                <a href="61.html">
+            
+                    
+                    61 Rotate List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.48" data-path="62.html">
+            
+                <a href="62.html">
+            
+                    
+                    62 Unique Paths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.49" data-path="63.html">
+            
+                <a href="63.html">
+            
+                    
+                    63 Unique Paths II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.50" data-path="64.html">
+            
+                <a href="64.html">
+            
+                    
+                    64 Minimum Path Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.51" data-path="69.html">
+            
+                <a href="69.html">
+            
+                    
+                    69 Sqrt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.52" data-path="74.html">
+            
+                <a href="74.html">
+            
+                    
+                    74 Search a 2D Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.53" data-path="77.html">
+            
+                <a href="77.html">
+            
+                    
+                    77 Combinations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.54" data-path="82.html">
+            
+                <a href="82.html">
+            
+                    
+                    82 Remove Duplicates from Sorted List II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.55" data-path="83.html">
+            
+                <a href="83.html">
+            
+                    
+                    83 Remove Duplicates from Sorted List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.56" data-path="86.html">
+            
+                <a href="86.html">
+            
+                    
+                    86 Partition List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.57" data-path="92.html">
+            
+                <a href="92.html">
+            
+                    
+                    92 Reverse Linked List II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.58" data-path="98.html">
+            
+                <a href="98.html">
+            
+                    
+                    98 Valid Binary Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.59" data-path="109.html">
+            
+                <a href="109.html">
+            
+                    
+                    109 Convert Sorted List to Binary Search Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.60" data-path="138.html">
+            
+                <a href="138.html">
+            
+                    
+                    138 Copy List with Random Pointer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.61" data-path="141.html">
+            
+                <a href="141.html">
+            
+                    
+                    141 Linked List Cycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.62" data-path="142.html">
+            
+                <a href="142.html">
+            
+                    
+                    142 Linked List Cycle II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.63" data-path="143.html">
+            
+                <a href="143.html">
+            
+                    
+                    143 Reorder List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.64" data-path="146.html">
+            
+                <a href="146.html">
+            
+                    
+                    146 LRU Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.65" data-path="147.html">
+            
+                <a href="147.html">
+            
+                    
+                    147 Insertion Sort List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.66" data-path="148.html">
+            
+                <a href="148.html">
+            
+                    
+                    148 Sort List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.67" data-path="153.html">
+            
+                <a href="153.html">
+            
+                    
+                    153 Find Minimum in Rotated Sorted Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.68" data-path="154.html">
+            
+                <a href="154.html">
+            
+                    
+                    154 Find Minimum in Rotated Sorted Array II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.69" data-path="160.html">
+            
+                <a href="160.html">
+            
+                    
+                    160 Intersection of Two Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.70" data-path="162.html">
+            
+                <a href="162.html">
+            
+                    
+                    162 Find Peak Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.71" data-path="167.html">
+            
+                <a href="167.html">
+            
+                    
+                    167 Two Sum II Input Array is sorted
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.72" data-path="198.html">
+            
+                <a href="198.html">
+            
+                    
+                    198 House Robber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.73" data-path="200.html">
+            
+                <a href="200.html">
+            
+                    
+                    200 Numbers of Islands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.74" data-path="203.html">
+            
+                <a href="203.html">
+            
+                    
+                    203 Remove Linked List Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.75" data-path="206.html">
+            
+                <a href="206.html">
+            
+                    
+                    206 Reverse Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.76" data-path="208.html">
+            
+                <a href="208.html">
+            
+                    
+                    208 Implement Trie(Prefix Tree)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.77" data-path="211.html">
+            
+                <a href="211.html">
+            
+                    
+                    211 Add and Search Word - Data Structure Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.78" data-path="215.html">
+            
+                <a href="215.html">
+            
+                    
+                    215 Kth Largest Element in an Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.79" data-path="216.html">
+            
+                <a href="216.html">
+            
+                    
+                    216 Combination Sum III
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.80" data-path="234.html">
+            
+                <a href="234.html">
+            
+                    
+                    234 Palindrome Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.81" data-path="237.html">
+            
+                <a href="237.html">
+            
+                    
+                    237 Delete Node in a Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.82" data-path="328.html">
+            
+                <a href="328.html">
+            
+                    
+                    328 Odd Even List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.83" data-path="369.html">
+            
+                <a href="369.html">
+            
+                    
+                    369 Plus One Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.84" data-path="377.html">
+            
+                <a href="377.html">
+            
+                    
+                    377 Combination Sum IV
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.85" data-path="379.html">
+            
+                <a href="379.html">
+            
+                    
+                    379 Design Phone Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.86" data-path="414.html">
+            
+                <a href="414.html">
+            
+                    
+                    414 Third Maximum Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.87" data-path="426.html">
+            
+                <a href="426.html">
+            
+                    
+                    426 Convert Binary Search Tree to Sorted Doubly Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.88" data-path="430.html">
+            
+                <a href="430.html">
+            
+                    
+                    430 Flatten a Multilevel Doubly Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.89" data-path="445.html">
+            
+                <a href="445.html">
+            
+                    
+                    445 Add Two Numbers II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.90" data-path="451.html">
+            
+                <a href="451.html">
+            
+                    
+                    451 Sort Characters By Frequency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.91" data-path="526.html">
+            
+                <a href="526.html">
+            
+                    
+                    526 Beautiful Arrangement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.92" data-path="683.html">
+            
+                <a href="683.html">
+            
+                    
+                    683 K Empty Slots
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.93" data-path="686.html">
+            
+                <a href="686.html">
+            
+                    
+                    686 Repeated String Match
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.94" data-path="703.html">
+            
+                <a href="703.html">
+            
+                    
+                    703 Kth Largest Element in a Stream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.95" data-path="707.html">
+            
+                <a href="707.html">
+            
+                    
+                    707 Design Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.96" data-path="708.html">
+            
+                <a href="708.html">
+            
+                    
+                    708 Insert into a Cyclic Sorted List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.97" data-path="725.html">
+            
+                <a href="725.html">
+            
+                    
+                    725 Split Linked List in Parts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.98" data-path="726.html">
+            
+                <a href="726.html">
+            
+                    
+                    726 Number of Atoms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.99" data-path="817.html">
+            
+                <a href="817.html">
+            
+                    
+                    817 Linked List Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.100" data-path="876.html">
+            
+                <a href="876.html">
+            
+                    
+                    876 Middle of the Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.101" data-path="1019.html">
+            
+                <a href="1019.html">
+            
+                    
+                    1019 Next Greater Node in Linked List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.102" data-path="1081.html">
+            
+                <a href="1081.html">
+            
+                    
+                    1081 Smallest Subsequence of Distinct Characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.103" data-path="tags.html">
+            
+                <a href="tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >12 Integer to Roman</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="12-integer-to-roman">12 Integer to Roman</h3><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="tags.html#math">Math</a> <a href="tags.html#string">String</a></p></div><!-- tagsstop --><blockquote>
+<p>&#x7EAF;&#x6A21;&#x62DF;</p>
+</blockquote>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">intToRoman</span><span class="hljs-params">(self, num)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        :type num: int
+        :rtype: str
+        &quot;&quot;&quot;</span>
+        d = {
+                <span class="hljs-number">1</span>:<span class="hljs-string">&quot;I&quot;</span>,
+                <span class="hljs-number">4</span>:<span class="hljs-string">&quot;IV&quot;</span>,
+                <span class="hljs-number">5</span>:<span class="hljs-string">&quot;V&quot;</span>,
+                <span class="hljs-number">9</span>:<span class="hljs-string">&quot;IX&quot;</span>,
+                <span class="hljs-number">10</span>:<span class="hljs-string">&quot;X&quot;</span>,
+                <span class="hljs-number">40</span>:<span class="hljs-string">&quot;XL&quot;</span>,
+                <span class="hljs-number">50</span>:<span class="hljs-string">&quot;L&quot;</span>,
+                <span class="hljs-number">90</span>:<span class="hljs-string">&quot;XC&quot;</span>,
+                <span class="hljs-number">100</span>:<span class="hljs-string">&quot;C&quot;</span>,
+                <span class="hljs-number">400</span>:<span class="hljs-string">&quot;CD&quot;</span>,
+                <span class="hljs-number">500</span>:<span class="hljs-string">&quot;D&quot;</span>,
+                <span class="hljs-number">900</span>:<span class="hljs-string">&quot;CM&quot;</span>,
+                <span class="hljs-number">1000</span>:<span class="hljs-string">&quot;M&quot;</span>
+        }
+        ans = <span class="hljs-string">&quot;&quot;</span>
+        <span class="hljs-keyword">while</span> num:
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">1000</span>,<span class="hljs-number">900</span>,<span class="hljs-number">500</span>,<span class="hljs-number">400</span>,<span class="hljs-number">100</span>,<span class="hljs-number">90</span>,<span class="hljs-number">50</span>,<span class="hljs-number">40</span>,<span class="hljs-number">10</span>,<span class="hljs-number">9</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">1</span>]:
+                <span class="hljs-keyword">if</span> i &lt;= num:
+                    j = i
+                    <span class="hljs-keyword">break</span>
+            num -= j
+            ans += d[j]
+        <span class="hljs-keyword">return</span> ans
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="11.html" class="navigation navigation-prev " aria-label="Previous page: 11 Container With Most Water">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="13.html" class="navigation navigation-next " aria-label="Next page: 13 Roman to Integer">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"tags":["Math","String"],"title":"12 Integer to Roman","level":"1.15","depth":1,"next":{"title":"13 Roman to Integer","level":"1.16","depth":1,"path":"13.md","ref":"13.md","articles":[]},"previous":{"title":"11 Container With Most Water","level":"1.14","depth":1,"path":"11.md","ref":"11.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","back-to-top-button","expandable-chapters-small","code","copy-code-button","-lunr","github","search-pro","splitter","tags"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jiali97"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"tags":{"placement":"top"},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode Solutions","links":{"sidebar":{"Jiali's Blog":"https://jiali97.github.io"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":"The solutions for the LeetCode problem","extension":null},"file":{"path":"12.md","mtime":"2019-07-31T23:49:19.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-09T01:21:52.482Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
