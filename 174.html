@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>726 Number of Atoms · LeetCode Solutions</title>
+        <title>174 Dungeon Game · LeetCode Solutions</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="817.html" />
+    <link rel="next" href="198.html" />
     
     
-    <link rel="prev" href="725.html" />
+    <link rel="prev" href="167.html" />
     
 
     </head>
@@ -1041,7 +1041,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.72" data-path="174.html">
+        <li class="chapter active" data-level="1.72" data-path="174.html">
             
                 <a href="174.html">
             
@@ -1470,7 +1470,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.105" data-path="726.html">
+        <li class="chapter " data-level="1.105" data-path="726.html">
             
                 <a href="726.html">
             
@@ -1578,7 +1578,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >726 Number of Atoms</a>
+        <a href="." >174 Dungeon Game</a>
     </h1>
 </div>
 
@@ -1593,9 +1593,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="726-number-of-atoms">726 Number of Atoms</h3><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="tags.html#hash-table">Hash Table</a> <a href="tags.html#stack">Stack</a> <a href="tags.html#recursion">Recursion</a></p></div><!-- tagsstop --><blockquote>
-<p>&#x4F7F;&#x7528;&#x6808; &#x8FDB;&#x884C;&#x62EC;&#x53F7;&#x5904;&#x7406;&#xFF0C; &#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x7684;&#x5730;&#x65B9;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9884;&#x5904;&#x7406;&#x7B49;&#x7B49;&#x3002;</p>
+                                <h3 id="174-dungeon-game">174 Dungeon Game</h3><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="tags.html#binary-search">Binary Search</a> <a href="tags.html#dynamic-programming">Dynamic Programming</a></p></div><!-- tagsstop --><blockquote>
+<p>&#x9898;&#x76EE;&#x7C7B;&#x4F3C;&#x4E8E;DP&#x7ECF;&#x5178;&#x95EE;&#x9898;&#x91CC;&#x9762;&#x7684;&#x6570;&#x5B57;&#x4E09;&#x89D2;&#x5F62;&#x3002;&#x6280;&#x5DE7;&#x662F;&#x7B80;&#x5355;&#x7684;&#x4ECE;&#x540E;&#x5411;&#x524D;&#x641C;&#x7D22;&#x3002;</p>
 </blockquote>
+<h4 id="java">Java</h4>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateMinimumHP</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] dungeon)</span> </span>{
+        <span class="hljs-keyword">int</span> row = dungeon.length;
+        <span class="hljs-keyword">int</span> col = dungeon[<span class="hljs-number">0</span>].length;
+        dungeon[row - <span class="hljs-number">1</span>][col - <span class="hljs-number">1</span>] = Math.max(<span class="hljs-number">1</span> - dungeon[row - <span class="hljs-number">1</span>][col - <span class="hljs-number">1</span>], <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = col - <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i --){
+            dungeon[row - <span class="hljs-number">1</span>][i] = Math.max(dungeon[row - <span class="hljs-number">1</span>][i + <span class="hljs-number">1</span>] - dungeon[row - <span class="hljs-number">1</span>][i], <span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = row -  <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i --){
+            dungeon[i][col - <span class="hljs-number">1</span>] = Math.max(dungeon[i + <span class="hljs-number">1</span>][col - <span class="hljs-number">1</span>] - dungeon[i][col - <span class="hljs-number">1</span>], <span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = row - <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i --)
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = col - <span class="hljs-number">2</span>; j &gt;= <span class="hljs-number">0</span>; j --)
+                dungeon[i][j] = Math.max(Math.min(dungeon[i + <span class="hljs-number">1</span>][j], dungeon[i][j + <span class="hljs-number">1</span>]) - dungeon[i][j], <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">return</span> dungeon[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
+    }
+}
+</code></pre>
 
                                 
                                 </section>
@@ -1623,12 +1642,12 @@
 
             
                 
-                <a href="725.html" class="navigation navigation-prev " aria-label="Previous page: 725 Split Linked List in Parts">
+                <a href="167.html" class="navigation navigation-prev " aria-label="Previous page: 167 Two Sum II Input Array is sorted">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="817.html" class="navigation navigation-next " aria-label="Next page: 817 Linked List Components">
+                <a href="198.html" class="navigation navigation-next " aria-label="Next page: 198 House Robber">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1639,7 +1658,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"tags":["Hash Table","Stack","Recursion"],"title":"726 Number of Atoms","level":"1.105","depth":1,"next":{"title":"817 Linked List Components","level":"1.106","depth":1,"path":"817.md","ref":"817.md","articles":[]},"previous":{"title":"725 Split Linked List in Parts","level":"1.104","depth":1,"path":"725.md","ref":"725.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","back-to-top-button","expandable-chapters-small","code","copy-code-button","-lunr","github","search-pro","splitter","tags"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jiali97"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"tags":{"placement":"top"},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode Solutions","links":{"sidebar":{"Jiali's Blog":"https://jiali97.github.io"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":"The solutions for the LeetCode problem","extension":null},"file":{"path":"726.md","mtime":"2019-08-01T00:41:50.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-12T04:10:32.527Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"tags":["Binary Search","Dynamic Programming"],"title":"174 Dungeon Game","level":"1.72","depth":1,"next":{"title":"198 House Robber","level":"1.73","depth":1,"path":"198.md","ref":"198.md","articles":[]},"previous":{"title":"167 Two Sum II Input Array is sorted","level":"1.71","depth":1,"path":"167.md","ref":"167.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","back-to-top-button","expandable-chapters-small","code","copy-code-button","-lunr","github","search-pro","splitter","tags"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jiali97"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"tags":{"placement":"top"},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode Solutions","links":{"sidebar":{"Jiali's Blog":"https://jiali97.github.io"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":"The solutions for the LeetCode problem","extension":null},"file":{"path":"174.md","mtime":"2019-08-12T00:57:08.046Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-12T04:10:32.527Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

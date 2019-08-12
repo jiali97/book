@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>726 Number of Atoms · LeetCode Solutions</title>
+        <title>270 Closest Binary Search Tree Value · LeetCode Solutions</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="817.html" />
+    <link rel="next" href="275.html" />
     
     
-    <link rel="prev" href="725.html" />
+    <link rel="prev" href="240.html" />
     
 
     </head>
@@ -1236,7 +1236,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.87" data-path="270.html">
+        <li class="chapter active" data-level="1.87" data-path="270.html">
             
                 <a href="270.html">
             
@@ -1470,7 +1470,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.105" data-path="726.html">
+        <li class="chapter " data-level="1.105" data-path="726.html">
             
                 <a href="726.html">
             
@@ -1578,7 +1578,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >726 Number of Atoms</a>
+        <a href="." >270 Closest Binary Search Tree Value</a>
     </h1>
 </div>
 
@@ -1593,9 +1593,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="726-number-of-atoms">726 Number of Atoms</h3><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="tags.html#hash-table">Hash Table</a> <a href="tags.html#stack">Stack</a> <a href="tags.html#recursion">Recursion</a></p></div><!-- tagsstop --><blockquote>
-<p>&#x4F7F;&#x7528;&#x6808; &#x8FDB;&#x884C;&#x62EC;&#x53F7;&#x5904;&#x7406;&#xFF0C; &#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x7684;&#x5730;&#x65B9;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x9884;&#x5904;&#x7406;&#x7B49;&#x7B49;&#x3002;</p>
-</blockquote>
+                                <h3 id="270-closest-binary-search-tree-value">270 Closest Binary Search Tree Value</h3><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="tags.html#binary-search">Binary Search</a> <a href="tags.html#tree">Tree</a></p></div><!-- tagsstop --><h4 id="python">Python</h4>
+<pre><code class="lang-python"><span class="hljs-comment"># Definition for a binary tree node.</span>
+<span class="hljs-comment"># class TreeNode(object):</span>
+<span class="hljs-comment">#     def __init__(self, x):</span>
+<span class="hljs-comment">#         self.val = x</span>
+<span class="hljs-comment">#         self.left = None</span>
+<span class="hljs-comment">#         self.right = None</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span><span class="hljs-params">(object)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">closestValue</span><span class="hljs-params">(self, root, target)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;
+        :type root: TreeNode
+        :type target: float
+        :rtype: int
+        &quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> root.left <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span> <span class="hljs-keyword">and</span> root.right <span class="hljs-keyword">is</span> <span class="hljs-keyword">None</span>:
+            <span class="hljs-keyword">return</span> root.val
+        d = root.val - target
+        <span class="hljs-keyword">if</span> d &gt; <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">if</span> root.left:
+                <span class="hljs-keyword">if</span> abs(d) &lt; abs(self.closestValue(root.left,target)-target):
+                    <span class="hljs-keyword">return</span> root.val
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-keyword">return</span> self.closestValue(root.left,target)
+            <span class="hljs-keyword">return</span> root.val
+        <span class="hljs-keyword">if</span> d &lt; <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">if</span> root.right:
+                <span class="hljs-keyword">if</span> abs(d) &lt; abs(self.closestValue(root.right,target)-target):
+                    <span class="hljs-keyword">return</span> root.val
+                <span class="hljs-keyword">else</span>:
+                    <span class="hljs-keyword">return</span> self.closestValue(root.right,target)
+            <span class="hljs-keyword">return</span> root.val
+        <span class="hljs-keyword">if</span> d == <span class="hljs-number">0</span>:
+            <span class="hljs-keyword">return</span> root.val
+</code></pre>
 
                                 
                                 </section>
@@ -1623,12 +1656,12 @@
 
             
                 
-                <a href="725.html" class="navigation navigation-prev " aria-label="Previous page: 725 Split Linked List in Parts">
+                <a href="240.html" class="navigation navigation-prev " aria-label="Previous page: 240 Search a 2D Matrix II">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="817.html" class="navigation navigation-next " aria-label="Next page: 817 Linked List Components">
+                <a href="275.html" class="navigation navigation-next " aria-label="Next page: 275 H-index II">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1639,7 +1672,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"tags":["Hash Table","Stack","Recursion"],"title":"726 Number of Atoms","level":"1.105","depth":1,"next":{"title":"817 Linked List Components","level":"1.106","depth":1,"path":"817.md","ref":"817.md","articles":[]},"previous":{"title":"725 Split Linked List in Parts","level":"1.104","depth":1,"path":"725.md","ref":"725.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","back-to-top-button","expandable-chapters-small","code","copy-code-button","-lunr","github","search-pro","splitter","tags"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jiali97"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"tags":{"placement":"top"},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode Solutions","links":{"sidebar":{"Jiali's Blog":"https://jiali97.github.io"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":"The solutions for the LeetCode problem","extension":null},"file":{"path":"726.md","mtime":"2019-08-01T00:41:50.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-12T04:10:32.527Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"tags":["Binary Search","Tree"],"title":"270 Closest Binary Search Tree Value","level":"1.87","depth":1,"next":{"title":"275 H-index II","level":"1.88","depth":1,"path":"275.md","ref":"275.md","articles":[]},"previous":{"title":"240 Search a 2D Matrix II","level":"1.86","depth":1,"path":"240.md","ref":"240.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","back-to-top-button","expandable-chapters-small","code","copy-code-button","-lunr","github","search-pro","splitter","tags"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/jiali97"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"tags":{"placement":"top"},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"LeetCode Solutions","links":{"sidebar":{"Jiali's Blog":"https://jiali97.github.io"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*","description":"The solutions for the LeetCode problem","extension":null},"file":{"path":"270.md","mtime":"2019-08-12T03:32:42.813Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-12T04:10:32.527Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
