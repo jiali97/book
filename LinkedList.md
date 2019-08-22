@@ -1,6 +1,6 @@
 ---
 tags:
-- 技巧
+- 技巧总结
 - Linked List
 ---
 
