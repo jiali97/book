@@ -2,6 +2,7 @@
 
 * [Linked List](LinkedList.md)
 * [Binary Search](BinarySearch.md)
+* [Backtracking](Backtracking.md)
 * [1 Two Sum](1.md)
 * [2 Add Two Numbers](2.md)
 * [3 Longest Substring Without Repeating Characters](3.md)

@@ -1,5 +1,6 @@
 ---
 tags:
+- 技巧总结
 - Binary Search
 ---
 
